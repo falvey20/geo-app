@@ -1,11 +1,14 @@
-import { ColorSchemeToggle } from '../components/ColorSchemeToggle/ColorSchemeToggle';
-import { Welcome } from '../components/Welcome/Welcome';
+import Map from '@/components/Map/map';
+import { NavbarMinimal } from '@/components/NavigationBar/NavigationBar';
 
 export default function HomePage() {
   return (
     <>
-      <Welcome />
-      <ColorSchemeToggle />
+      {/* Container for the layout */}
+      <div style={{ display: 'flex', height: '100vh' }}>
+        <NavbarMinimal />
+        <Map />
+      </div>
     </>
   );
 }

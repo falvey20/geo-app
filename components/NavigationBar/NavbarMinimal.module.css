@@ -1,0 +1,38 @@
+.navbar {
+  width: 80px; /* Use fixed pixel or rem value */
+  height: 100vh; /* Full height of the viewport */
+  padding: var(--mantine-spacing-md); /* Use Mantine's spacing system */
+  display: flex;
+  flex-direction: column;
+  background-color: var(--mantine-color-gray-9);
+}
+
+.navbarMain {
+  flex: 1;
+  margin-top: 1rem; /* Top margin for positioning */
+}
+
+.link {
+  width: 50px;
+  height: 50px;
+  border-radius: var(--mantine-radius-md); /* Mantine's radius system */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--mantine-color-gray-6); /* Use Mantine color tokens */
+
+  /* Hover effect */
+  &:hover {
+    background-color: var(--mantine-color-gray-8);
+    color: white;
+  }
+
+  /* Active link state */
+  &[data-active] {
+    &,
+    &:hover {
+      background-color: var(--mantine-color-blue-light);
+      color: var(--mantine-color-blue-light-color);
+    }
+  }
+}
