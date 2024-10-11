@@ -1,0 +1,15 @@
+/* MainSearchBar.css */
+.main-search-bar {
+  position: absolute;
+  margin-top: 0.75rem;
+  right: 0.75rem; /* 0.5rem away from the right edge */
+
+  align-items: center; /* Horizontally center the contents */
+
+  background-color: transparent; /* Make the container invisible */
+  pointer-events: none; /* Disable pointer events on the container */
+}
+
+.main-search-bar > * {
+  pointer-events: auto; /* Enable pointer events on child components */
+}

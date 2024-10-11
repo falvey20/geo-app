@@ -66,16 +66,9 @@ export function NavbarMinimal() {
 
   return (
     <nav className={classes.navbar}>
-      <Center
-        style={{ marginTop: '1rem', marginBottom: '1rem' }} // Adds 1rem spacing above and below the logo
-      >
+      <Center style={{ marginTop: '1rem', marginBottom: '1rem' }}>
         {/* Use MantineImage to ensure responsive scaling */}
-        <Image
-          src={rokeLogo.src}
-          alt="Roke Logo"
-          width={80} // Only set width, height will adjust automatically
-          style={{ objectFit: 'contain' }} // Ensure the image doesn't get cropped
-        />
+        <Image src={rokeLogo.src} alt="Roke Logo" width={80} style={{ objectFit: 'contain' }} />
       </Center>
 
       <div className={classes.navbarMain}>

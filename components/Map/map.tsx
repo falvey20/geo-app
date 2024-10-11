@@ -6,12 +6,14 @@
 import React, { useEffect, useRef, useState } from 'react';
 import mapboxgl from 'mapbox-gl';
 import { MapCoordinates } from '../MapCoordinates/MapCoordinates';
-import MapStylePicker from '../MapStylePicker/MapStylePicker';
 
 import './Map.css';
 import 'mapbox-gl/dist/mapbox-gl.css';
 
-// Set your Mapbox access token
+import MainSearchBar from '../MainSearchBar/MainSearchBar';
+import RightMenu from '../RightMenu/RightMenu';
+
+// Mapbox access token
 mapboxgl.accessToken = process.env.NEXT_PUBLIC_MAPBOX_TOKEN || 'your_mapbox_token';
 
 const mapTypes = [
@@ -80,7 +82,8 @@ const Map: React.FC = () => {
     <>
       <div className="map-container" ref={mapContainerRef} />
       <MapCoordinates coordinates={cursorCoordinates} />
-      <MapStylePicker styles={mapTypes} onSwitch={switchStyle} />
+      <RightMenu styles={mapTypes} onSwitch={switchStyle} />
+      <MainSearchBar />
     </>
   );
 };
