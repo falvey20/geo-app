@@ -1,0 +1,17 @@
+.right-menu {
+  position: absolute;
+  top: 0;
+  right: 0.75rem; /* 0.5rem away from the right edge */
+  height: 100vh; /* 100% of the viewport height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Vertically center the contents */
+  align-items: center; /* Horizontally center the contents */
+  gap: 1rem; /* 1rem space between components */
+  background-color: transparent; /* Make the container invisible */
+  pointer-events: none; /* Disable pointer events on the container */
+}
+
+.right-menu > * {
+  pointer-events: auto; /* Enable pointer events on child components */
+}

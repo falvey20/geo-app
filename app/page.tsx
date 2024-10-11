@@ -1,3 +1,4 @@
+import MainSearchBar from '@/components/MainSearchBar/MainSearchBar';
 import Map from '@/components/Map/map';
 import { NavbarMinimal } from '@/components/NavigationBar/NavigationBar';
 

@@ -9,15 +9,7 @@ interface MapStylePickerProps {
 }
 
 const MapStylePicker: React.FC<MapStylePickerProps> = ({ styles, onSwitch }) => (
-  <div
-    style={{
-      position: 'absolute',
-      top: '50%', // Center vertically
-      right: '10px', // Position it towards the right
-      transform: 'translateY(-50%)', // Adjust for vertical centering
-      zIndex: 1000,
-    }}
-  >
+  <div>
     <Menu withinPortal={false} position="left">
       <Menu.Target>
         <Button
@@ -34,10 +26,10 @@ const MapStylePicker: React.FC<MapStylePickerProps> = ({ styles, onSwitch }) => 
           }}
           onMouseEnter={(e) => {
             e.currentTarget.style.backgroundColor = 'var(--mantine-color-gray-9)';
-            e.currentTarget.style.color = 'white'; // Change text color on hover
+            e.currentTarget.style.color = 'white';
           }}
           onMouseLeave={(e) => {
-            e.currentTarget.style.color = 'var(--mantine-color-gray-4)'; // Reset text color
+            e.currentTarget.style.color = 'var(--mantine-color-gray-4)';
             e.currentTarget.style.backgroundColor = 'var(--mantine-color-gray-8)';
           }}
         >
@@ -46,8 +38,8 @@ const MapStylePicker: React.FC<MapStylePickerProps> = ({ styles, onSwitch }) => 
       </Menu.Target>
       <Menu.Dropdown
         style={{
-          backgroundColor: 'var(--mantine-color-gray-9)', // Same background as button
-          border: 'none', // Remove border
+          backgroundColor: 'var(--mantine-color-gray-9)',
+          border: 'none',
           opacity: 0.95,
         }}
       >
@@ -56,16 +48,16 @@ const MapStylePicker: React.FC<MapStylePickerProps> = ({ styles, onSwitch }) => 
             key={style.name}
             onClick={() => onSwitch(style.url)}
             style={{
-              color: 'var(--mantine-color-gray-4)', // Set text color to grey
-              transition: 'background-color 0.2s', // Smooth transition
+              color: 'var(--mantine-color-gray-4)',
+              transition: 'background-color 0.2s',
             }}
             onMouseEnter={(e) => {
               e.currentTarget.style.backgroundColor = 'var(--mantine-color-gray-8)';
-              e.currentTarget.style.color = 'white'; // Change text color on hover
+              e.currentTarget.style.color = 'white';
             }}
             onMouseLeave={(e) => {
-              e.currentTarget.style.backgroundColor = 'transparent'; // Reset background
-              e.currentTarget.style.color = 'var(--mantine-color-gray-4)'; // Reset text color
+              e.currentTarget.style.backgroundColor = 'transparent';
+              e.currentTarget.style.color = 'var(--mantine-color-gray-4)';
             }}
           >
             {style.name}
